@@ -7,6 +7,7 @@
   --accent-logo-color: #2196f3;
   --accent-bg-color: #2f303a;
   --button-color: #f5f4fa;
+  --team-bg-color: #f5f4fa;
   --header-border-color: #ececec;
   --card-gap: 30px;
   --project-card-border: #eeeeee;
@@ -230,6 +231,10 @@ img {
   margin: 0;
   margin-left: calc(-1 * var(--card-gap));
 }
+.section.around {
+  background-color: var(--team-bg-color);
+}
+
 .team-card {
   flex-basis: calc(100% / 4 - var(--card-gap));
   margin-left: var(--card-gap);
