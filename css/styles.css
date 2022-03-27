@@ -26,9 +26,16 @@ img {
   height: auto;
 }
 
-.list {
+ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 .visually-hidden {
@@ -56,8 +63,6 @@ img {
 .page-header {
   display: flex;
   align-items: center;
-}
-.line {
   border-bottom: 1px solid var(--header-border-color);
 }
 
@@ -80,6 +85,11 @@ img {
 }
 /* Navigation */
 
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
 .nav {
   text-decoration: none;
   display: flex;
@@ -88,15 +98,15 @@ img {
 
 .site-nav {
   display: flex;
-}
-.site-nav .item + .item {
-  margin-left: 50px;
-}
-.site-nav .item:first-child {
   margin-left: 93px;
+}
+.site-nav .nav-item + .nav-item {
+  margin-left: 50px;
 }
 
 .nav-link {
+  display: block;
+  padding: 32px 0;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -116,11 +126,11 @@ img {
   display: flex;
   margin-left: auto;
 }
-.contacts .item + .item {
+.contacts .contact-item + .contact-item {
   margin-left: 50px;
 }
 
-.contact {
+.contact-info {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -129,8 +139,8 @@ img {
   text-decoration: none;
 }
 
-.contact:hover,
-.contact:focus {
+.contact-info:hover,
+.contact-info:focus {
   color: var(--accent-color);
 }
 
@@ -140,13 +150,12 @@ img {
 
 .hero {
   background-color: var(--accent-bg-color);
+  padding: 200px 0;
   text-align: center;
 }
 
 .hero-title {
   text-transform: uppercase;
-  padding: 200px 252px 30px 252px;
-  margin: 0;
   color: var(--primary-white-color);
 
   font-weight: 900;
@@ -159,6 +168,7 @@ img {
 
 .hero-button {
   display: inline-block;
+  margin-top: 30px;
   text-align: center;
   border: none;
   border-radius: 4px;
@@ -171,13 +181,16 @@ img {
   font-weight: 700;
   height: 50px;
   min-width: 200px;
-  margin: 0px auto 200px auto;
 }
 
 /* Common sections */
 
 .section {
-  padding: 94px 0px;
+  padding: 94px;
+}
+
+.section .secondary {
+  padding-top: 94px;
 }
 
 .title {
@@ -187,7 +200,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  margin: 0;
 }
 
 .section-title {
@@ -196,7 +208,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
-  margin: 0px 0px 50px 0px;
+  margin-bottom: 50px;
 }
 
 /* Our fatures */
@@ -204,7 +216,7 @@ img {
   display: flex;
   margin: 0;
 }
-.features .item + .item {
+.features .features-item + .features-item {
   margin-left: 30px;
 }
 
@@ -212,7 +224,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin: 10px 0px 0px;
+  margin-top: 10px;
 }
 /* About Us  */
 
@@ -221,14 +233,13 @@ img {
   display: flex;
   justify-content: center;
 }
-.about .item + .item {
+.about .about-item + .about-item {
   margin-left: 30px;
 }
 
 /*  Our  Team */
 .team {
   display: flex;
-  margin: 0;
   margin-left: calc(-1 * var(--card-gap));
 }
 .section.around {
@@ -238,11 +249,13 @@ img {
 .team-card {
   flex-basis: calc(100% / 4 - var(--card-gap));
   margin-left: var(--card-gap);
+
+  background-color: var(--primary-white-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-content {
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .team-title {
@@ -253,22 +266,22 @@ img {
   line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
-  margin: 0;
+  margin-bottom: 10px;
 }
 .team-info {
   font-weight: 400;
   text-align: center;
-  margin: 0;
 }
 
 /* Filter */
 
 .filter {
   display: flex;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
-.filter .item + .item {
+.filter .filter-item + .filter-item {
   margin-left: 8px;
 }
 
@@ -304,7 +317,6 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin: 0;
 }
 
 .project-link {
@@ -316,7 +328,6 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  margin-top: 4px;
 }
 
 /* Card-set */
@@ -330,7 +341,6 @@ img {
 }
 
 .project-item {
-  display: flex;
   flex-basis: calc(100% / 3 - var(--card-gap));
   margin-right: var(--card-gap);
   margin-bottom: var(--card-gap);
@@ -350,6 +360,7 @@ img {
 /* Address */
 
 .address {
+  margin-top: 20px;
   font-style: normal;
 }
 
@@ -368,5 +379,6 @@ img {
 }
 
 .sub {
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
 }
