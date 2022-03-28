@@ -60,13 +60,14 @@ p {
 }
 
 /* Header */
+
 .page-header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--header-border-color);
 }
 
-/* Logotype */
+/* Logo */
 
 .logo {
   color: var(--title-text-color);
