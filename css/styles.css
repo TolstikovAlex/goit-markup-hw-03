@@ -186,11 +186,11 @@ p {
 /* Common sections */
 
 .section {
-  padding: 94px;
+  padding: 94px 0;
 }
 
-.section .secondary {
-  padding-top: 94px;
+.section.secondary {
+  padding-top: 0;
 }
 
 .title {
@@ -229,7 +229,6 @@ p {
 /* About Us  */
 
 .about {
-  margin: 0;
   display: flex;
   justify-content: center;
 }
