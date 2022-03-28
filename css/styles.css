@@ -332,7 +332,6 @@ p {
 /* Card-set */
 
 .project {
-  margin: 0;
   margin-right: calc(-1 * var(--card-gap));
   margin-bottom: calc(-1 * var(--card-gap));
   display: flex;
@@ -359,8 +358,10 @@ p {
 /* Address */
 
 .address {
-  margin-top: 20px;
   font-style: normal;
+}
+.address-items {
+  margin-top: 20px;
 }
 
 .address-item {
@@ -371,6 +372,9 @@ p {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+.address .address-item + .address-item {
+  margin-top: 9px;
+}
 
 .address-item:hover,
 .address-item:focus {
@@ -380,4 +384,5 @@ p {
 .sub {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
 }
